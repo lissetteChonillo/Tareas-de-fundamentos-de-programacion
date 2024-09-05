@@ -1,0 +1,23 @@
+#Crear la matriz
+ciudades = ["Guayaquil", "Manabi", "Esmeraldas"]  # Nombres de las ciudades
+dias_semana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+semanas = 4 # Numero de semanas
+dias_semanas=7
+temperaturas = [[[25, 28, 26, 29, 30, 27, 28],  # Semana 1
+                 [27, 29, 28, 26, 25, 27, 30], #Semana 2
+                 [19, 32, 21, 20, 22, 23, 25], #Semana 3
+                 [24, 21, 30, 29, 26, 25, 28]], # Semana 4
+                [[20, 21, 23, 22, 24, 25, 23],#Semana 1
+                 [22, 23, 21, 24, 20, 22, 23],#Semana 2
+                 [21, 30, 27, 29, 28, 22, 21],#Semana 3
+                 [25, 30, 22, 31, 22, 29, 27]],#Semana 4
+                [[30, 29, 28, 32, 31, 30, 33], #semana 1
+                 [31, 30, 29, 28, 32, 31, 30], #Semana 2
+                 [26, 22, 29, 30, 33, 25, 21], #Semana 3
+                 [33, 23, 22, 20, 22, 29, 30]]]#semana 4
+#calcular el promedio de temperatura por ciudad
+for i, ciudad in enumerate(ciudades):#Utilizamos la funcion "enumerate" la utilizamos para obtener el indice y el valor de la lista ciudades
+    print(f"Promedio de {ciudad}:")#Esto imprime el nombre de la ciudad, utilize una cadena que nos permite insertar el valor de la variable
+    for semana in range(semanas):#Este es un bucle que itera a través de cada semana
+        promedio = sum(temperaturas[i][semana]) /dias_semanas#Accedemos a los datos de temperaturas de la ciudad[i],en la semana
+        print(f"  Semana {semana + 1}: {promedio:.2f}°C")#imprime el promedio de la semana actual
