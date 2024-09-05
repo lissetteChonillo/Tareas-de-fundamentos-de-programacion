@@ -1,0 +1,22 @@
+#arreglo bidimencional de 3×3
+arreglo_bidimencional=[
+       [122,18,89],
+       [11,68,45],
+       [15,189,9]
+]
+#buscar el valor
+def encontrar_el_valor(arreglo_bidimencional, valor):
+    for i in range(len(arreglo_bidimencional)):
+        for j in range(len(arreglo_bidimencional[i])):
+            if arreglo_bidimencional[i][j]== valor:
+                return (i,j) #Retorna a la posición fila o columna si se encuentra el valor
+    return None #
+#Asignamos el valor que queremos buscar
+valor_a_encontrar=2567
+#definimos la variable para buscar el reesultado
+lugar=encontrar_el_valor(arreglo_bidimencional,valor_a_encontrar)
+#En esta parte mostramos los resultados
+if lugar:
+    print(f"El valor {valor_a_encontrar} se encontro en el{lugar}")#este sera el mensaje que se va a mostrar si se encuentra el valor
+else:
+    print(f"El valor {valor_a_encontrar} no se encontró en la matriz.")# este sera el mensaje que se va a mostrar si no sse encuentra el numero
