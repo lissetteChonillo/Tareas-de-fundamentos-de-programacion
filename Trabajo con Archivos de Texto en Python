@@ -1,0 +1,16 @@
+# Escritura de un archivo de Texto
+
+with open("my_notes.txt", "w") as file:
+    file.write("Un sementre menos, un nuevo reto desbloqueado"\n")
+    file.write("El ser humano nunca deja de aprender\n")
+    file.write("la vida nos pondra siempre desafios depende de nosotros lograr superarlos\n")
+
+# Lectura de Archivo de Texto
+with open("my_notes.txt", "r") as file:
+    #esto leera cada linea
+    line = file.readline()
+    while line:
+        print(line.strip())  # Eliminar los saltos de línea adicionales
+        line = file.readline()
+
+# El archivo se cierra automáticamente al salir del bloque 'with', tanto en escritura como en lectura.
